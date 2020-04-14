@@ -1,0 +1,5 @@
+Django==2.2.4
+httplib2==0.11.3
+pillow==5.0.0
+psycopg2==2.8.3
+static3==0.7.0
