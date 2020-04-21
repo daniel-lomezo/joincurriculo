@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-config:set DISABLE_COLLECTSTATIC=1
 
 DISABLE_COLLECTSTATIC=1
 
