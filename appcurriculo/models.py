@@ -8,7 +8,7 @@ class formacao(models.Model):
 	
 
 	def __str__(self):
-		return self.nomecusro
+		return self.nomecurso
 
 
 class experiencia(models.Model):
