@@ -80,9 +80,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'curriculo',
         # 'NAME': os.path.join(BASE_DIR, ''),
-        'USER': 'postgres',
-        'PASSWORD': '008090',
-        'HOST': '127.0.0.1',
+        'USER': 'd9s9oehgtn1k36',
+        'PASSWORD': '2934b1a44167021f557fd2900e60fea7c33eb505edf30a0f73f13f2732b47ce0',
+        'HOST': 'ec2-52-71-85-210.compute-1.amazonaws.com',
         '5432': '', # 8000 is default
     }
 }
