@@ -1,1 +1,1 @@
-web: gunicorn curriculo --log-file -
+web: gunicorn curriculo.wsgi --log-file -
