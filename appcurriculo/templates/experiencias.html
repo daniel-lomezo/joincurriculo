@@ -22,7 +22,7 @@
 
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="../experiencias/">Experiências</a>
+      <a class="navbar-brand" href="/curriculo/">Dados Pessoais</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -39,7 +39,6 @@
           </li>
         </ul>
       </div>
-      
     </nav>
 
 <main role="main">
@@ -47,59 +46,35 @@
       <!-- Principal jumbotron, para a principal mensagem de marketing ou call to action -->
       <div class="jumbotron">
         <div class="container">
-          <h1 class="display-3">Daniel Lomezo</h1>
-          <p>Olá, me chamo Daniel Lomezo e estudo programação faz 5 anos, mas sempre estive no mundo da tecnologia. <br>
-          	 Atualmente desenvolvo Software em Python - Django ou Go Lang e estou me especializando em automação de processos e de infraestrutura. <br>
-          	 Tenho a intenção de aprender ao máximo novas linguágens e tecnologias diferentes e ajudar em tudo que for possível. 
-           </p>
-        
+          <h3 class="display-4">Experiências</h3>
+                 
         </div>
       </div>
-      <hr />
 
 <div class="container">
 	<div class="container">
         <!-- Exemplo de linha de colunas -->
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Informações Pessoais</h2>
-            <p class="card-text">
-       			Celular: +55 (21) 97416-4650<br>
-	    		E-mail: daniel.ubletech@gmail.com<br>
-	    		Endereço: Rua Cintia, 68 - Nova Iguaçu<br>
-	    		Idade: 28 Anos<br>
-	    		Estado Civil: Solteiro
-	    	</p>
-          </div>
+    
+    <p><h2>Experiências</h2></p>
+    <hr width = “2” size = “100”>
+      {% for experiencia in experiencialist %}
 
-
-          <div class="col-md-4">
-            <h2>Idiomas</h2>
-            <p><b>Inglês</b> - Técnico </p>
-
-          </div>
-          <div class="col-md-4">
-            <h2>Formação</h2>
-            {% for formacao in fornacaolist %}
-            <p>
-            <b>{{formacao.nomecurso}}</b> - {{formacao.textdescricao}}
-	    	    </p>
-	    	    {% endfor %} 
-          </div>
-        </div>
-        <br>
-        <br>
-        <br>
-
-        <!-- (<hr />)  Linha horizontal -->
-        
-          
+      <div class="col-md-4">
+        <h4><b>{{ experiencia.cargo}}</b></h4>
+        <p><b>{{experiencia.nomeempresa}}</b></p>
+        <p>Funções - {{experiencia.objetos}}</p>
       </div>
+      <hr>
+      
 
-          
+        {% endfor %}
+  </div>
 
-       
-    </div> <!-- /container -->
+    
+  
+  
+</div> 
+<!-- /container -->
 </main>
 
     <footer class="container">

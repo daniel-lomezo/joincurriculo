@@ -15,11 +15,18 @@ from datetime import date
 # Create your views here.
 
 def curriculo_inicio(request):
-	formacaolist = {}
-	formacaolist['formacaolist'] = formacao.objects.all()
-
 	
-	return render(request, 'curriculo.html', formacaolist)
+	formacaolist = {}
+	formacaolist['fornacaolist'] = formacao.objects.all()
+	
+	return render(request, 'curriculo.html',  formacaolist)
+
+def viewexperiencia(request):
+	
+	experiencialist = {}
+	experiencialist['experiencialist'] = experiencia.objects.all()
+	
+	return render(request, 'experiencias.html',  experiencialist)
 
 
 

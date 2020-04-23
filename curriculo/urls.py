@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from appcurriculo.views import curriculo_inicio
 from appcurriculo.views import redirecionamento
+from appcurriculo.views import viewexperiencia
 
 
 
@@ -25,6 +26,7 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('curriculo/', curriculo_inicio),
+    path('experiencias/', viewexperiencia),
    	path('', redirecionamento)
     
 
