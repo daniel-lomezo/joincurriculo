@@ -16,10 +16,12 @@ from datetime import date
 
 def curriculo_inicio(request):
 	
-	formacaolist = {}
-	formacaolist['fornacaolist'] = formacao.objects.all()
+	fornacaolist = {}
+	fornacaolist['fornacaolist'] = formacao.objects.all()
 	
-	return render(request, 'curriculo.html',  formacaolist)
+	return render(request, 'curriculo.html',  fornacaolist)
+
+
 
 def viewexperiencia(request):
 	
