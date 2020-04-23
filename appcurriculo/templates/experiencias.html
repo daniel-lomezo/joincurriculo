@@ -34,7 +34,7 @@
             <a class="nav-link dropdown-toggle" href="http://example.com/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Falar Comigo</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="#">E-Mail</a>
-              <a class="dropdown-item" href="#">Telegra</a>
+              <a class="dropdown-item" href="#">Telegram</a>
             </div>
           </li>
         </ul>
@@ -45,26 +45,27 @@
 
       <!-- Principal jumbotron, para a principal mensagem de marketing ou call to action -->
       <div class="jumbotron">
-        <div class="container">
+       
           <h3 class="display-4">Experiências</h3>
                  
-        </div>
+       
       </div>
 
 <div class="container">
 	<div class="container">
         <!-- Exemplo de linha de colunas -->
     
-    <p><h2>Experiências</h2></p>
     <hr width = “2” size = “100”>
       {% for experiencia in experiencialist %}
 
-      <div class="col-md-4">
-        <h4><b>{{ experiencia.cargo}}</b></h4>
-        <p><b>{{experiencia.nomeempresa}}</b></p>
-        <p>Funções - {{experiencia.objetos}}</p>
-      </div>
+      
+        <h4><b>{{ experiencia.nomeempresa}}</b></h4>
+        <p><b>{{experiencia.cargo}}</b></p>
+        <p><b>Funções:</b>  {{experiencia.objetos}}</p>
+      
       <hr>
+      <br>
+      <br>
       
 
         {% endfor %}
