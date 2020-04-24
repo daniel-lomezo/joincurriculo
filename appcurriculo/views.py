@@ -7,6 +7,7 @@ from .models import experiencia
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from datetime import date
+from emailpak.email import mail
 
 
 
@@ -32,7 +33,22 @@ def viewexperiencia(request):
 
 
 
+@csrf_protect
+def submitemail(request):
 
+	if request.POST:
+
+		titulomensagem = request.POST.get('titulo')
+		emailenvio = request.POST.get('email')
+		mensagem = request.POST.get('mensagem')
+		
+		print(titulomensagem, emailenvio, mensagem)
+
+		envia = mail.enviaemail('0', titulomensagem, mensagem, emailenvio)
+
+		return redirect('/curriculo/')
+
+	return redirect('/curriculo/')
 
 		
 	

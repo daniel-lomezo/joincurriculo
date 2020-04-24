@@ -123,7 +123,7 @@
                       </button>
                   </div>
                   <div class="modal-body">
-                      <form action="submitformail", method="POST">{% csrf_token %}
+                      <form action="../enviaemail/submit/" method="POST">{% csrf_token %}
                           
                           <div class="form-group">
                               <label for="versao">Título do E-mail</label>
@@ -131,20 +131,16 @@
                           </div>
                           <div class="form-group">
                               <label for="versao">Seu E-mail</label>
-                              <input type="text" class="form-control" name="horafinal" id="horafinal" placeholder="Coloque seu e-mail aqui">
+                              <input type="text" class="form-control" name="email" id="email" placeholder="Coloque seu e-mail aqui">
                           </div>    
                            <div class="form-group">
                             <label for="exampleFormControlTextarea1">Sua Mensagem</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escreta sua mensagem aqui"></textarea>
+                            <textarea class="form-control" type="text" id="mensagem" name="mensagem" rows="3" placeholder="Escreta sua mensagem aqui"></textarea>
                           </div>
-                                
-                              
-                              
-                          </div>
+
                           
-                          </div>
                           <div class="modal-footer">
-                              <a href="curriculo.html"><button type="submit"  class="btn btn-primary">Alterar</button></a>
+                              <a href="enviaemail/submit"><button type="submit"  class="btn btn-primary">Enviar</button></a>
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                           </div>
                       </form>
