@@ -35,7 +35,7 @@ class mail(object):
             message.attach(MIMEText(Corpomensagem, 'plain'))
             message['subject'] = titulo
             message['from'] = username
-            message['to'] = ', '.join(emaildeenvio)
+            message['to'] = emaildeenvio
             #config = os.path.join(os.path.dirname(os.path.abspath(__file__)), caminho)
             #attachment = open(config, "rb")
 
@@ -53,7 +53,7 @@ class mail(object):
             # para interagir com um servidor externo precisaremos
             # fazer login nele
             server.login(username, password)
-            server.sendmail(emaildeenvio, emaildeenvio, message.as_string())
+            server.sendmail(emaildeenvio, 'daniel.ubletech@gmail.com', message.as_string())
             server.quit()
         except:
             print('Erro ao enviar')
