@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bbvx7x*4r0q0d5owb)!990lq^8z&_@)(xe9ra0_7iqp6m9&or$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -129,13 +129,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_HOST = os.environ.get('DJANGO_STATIC_HOST', '')
+
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATIC_URL = '/static/'
+STATIC_URL = STATIC_HOST + '/static/'
 PROJECT_PATH = os.path.abspath(os.path.dirname(__name__))
 STATICFILES_DIRS = [
        os.path.join(PROJECT_PATH, 'static')
