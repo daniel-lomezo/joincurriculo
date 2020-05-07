@@ -18,7 +18,7 @@ from emailpak.email import mail
 def curriculo_inicio(request):
 	
 	fornacaolist = {}
-	fornacaolist['fornacaolist'] = formacao.objects.all()
+	fornacaolist['fornacaolist'] = formacao.objects.order_by('nomecurso').all()
 	
 	return render(request, 'curriculo.html',  fornacaolist)
 
