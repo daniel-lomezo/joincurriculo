@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bbvx7x*4r0q0d5owb)!990lq^8z&_@)(xe9ra0_7iqp6m9&or$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['joincurriculo.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -138,6 +138,7 @@ STATICFILES_DIRS = (
 )
 
 STATIC_URL = STATIC_HOST + '/static/'
+
 PROJECT_PATH = os.path.abspath(os.path.dirname(__name__))
 STATICFILES_DIRS = [
        os.path.join(PROJECT_PATH, 'static')
