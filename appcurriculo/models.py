@@ -8,7 +8,7 @@ class formacao(models.Model):
 	
 
 	def __str__(self):
-		return self.nomecurso
+		return self.nomecurso , self.textdescricao
 
 
 class experiencia(models.Model):
@@ -19,4 +19,4 @@ class experiencia(models.Model):
 	
 
 	def __str__(self):
-		return self.nomeempresa
+		return self.nomeempresa  +  '   :::::' +  self.objetos

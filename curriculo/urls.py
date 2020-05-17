@@ -14,20 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from appcurriculo.views import curriculo_inicio
+from django.urls import path, include
+from appcurriculo import urls as urls_curriculos
 from appcurriculo.views import redirecionamento
-from appcurriculo.views import viewexperiencia
-from appcurriculo.views import submitemail
 
 
 urlpatterns = [
 
 
     path('admin/', admin.site.urls),
-    path('curriculo/', curriculo_inicio),
-    path('experiencias/', viewexperiencia),
-    path('enviaemail/submit/', submitemail),
+  
+    path('curriculo/', include(urls_curriculos)),
    	path('', redirecionamento)
     
 

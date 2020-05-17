@@ -76,7 +76,7 @@
           <div class="col-md-4">
             <h2>Idiomas</h2>
             <p><b>Inglês</b> - Técnico </p>
-
+        
           </div>
           <div class="col-md-4">
             <h2>Formação</h2>
@@ -90,6 +90,7 @@
         <br>
         <br>
         <br>
+    
 
         <!-- (<hr />)  Linha horizontal -->
         
@@ -148,6 +149,53 @@
               </div>
           </div>
       </div> 
+
+
+<!-- Modal Evnio de Telegram-->
+      <div class="modal" id="enviotelegram" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title">Enviar uma mensagem para o meu Telegram</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <form action="../enviatelegram/submit/" method="POST">{% csrf_token %}
+                          <div class="form-group">
+                              <label for="versao"><b>Seu Nome</b></label>
+                              <input type="text" class="form-control" name="nome" id="nome" placeholder="Escreva aqui o título da mensagem">
+                          </div>
+                          
+                          <div class="form-group">
+                              <label for="versao"><b>Título da Mensagem</b></label>
+                              <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Escreva aqui o título da mensagem">
+                          </div>
+                          <div class="form-group">
+                              <label for="versao"><b>Seu E-mail</b></label>
+                              <input type="text" class="form-control" name="email" id="email" placeholder="Coloque seu e-mail aqui">
+                          </div>    
+                          <div class="form-group">
+                              <label for="versao"><b>Seu ID Telegra - Número de telefone</b></label>
+                              <input type="text" class="form-control" name="idtelegram" id="idtelegram" placeholder="Coloque seu e-mail aqui">
+                          </div>    
+                           <div class="form-group">
+                            <label for="exampleFormControlTextarea1"><b>Sua Mensagem</b></label>
+                            <textarea class="form-control" type="text" id="mensagem" name="mensagem" rows="3" placeholder="Escreta sua mensagem aqui"></textarea>
+                          </div>
+
+                          
+                          <div class="modal-footer">
+                              <a href="enviaemail/submit"><button type="submit"  class="btn btn-primary">Enviar</button></a>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div> 
+
 
 
 
