@@ -14,3 +14,4 @@ class ListaCasamento(models.Model):
     medida_item = models.CharField(max_length=300, null=True, blank=True, verbose_name="Medida do Item")
     preferencia_cor = models.CharField(max_length=300, null=True, blank=True, verbose_name="Preferência de cor")
     tipo_lista = models.CharField(max_length=300, null=True, blank=True, verbose_name="Tipo da Lista", choices=TipoLista.CHOICES)
+    item_ja_escolhido = models.BooleanField(null=True, blank=True, default=False, verbose_name="Item disponivel ou não", help_text="Se não estiver marcado o Item ainda não foi escolhido")
