@@ -1,5 +1,5 @@
 Django==3.2.14
-httplib2==0.11.3
+httplib2==0.19.0
 psycopg2==2.8.3
 requests
 whitenoise
