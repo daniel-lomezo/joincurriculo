@@ -22,10 +22,12 @@ def choice_item(request):
     id_tem = request.data.get("id_item")
     print(f"JSON = {id_tem}")
     list_casamento = ListaCasamento.objects.filter(pk=int(id_tem)).order_by("nome_item")
-    list_casamento.first().item_ja_escolhido = False
-    list_casamento.first().save()
+
     print(list_casamento)
     serializer = ListaCasamentoSerializer(list_casamento, many=True)
+    print(serializer.data)
+    list_casamento.first().item_ja_escolhido = False
+    list_casamento.first().save()
     print(f'Serializer {serializer}')
 
     return Response(data=serializer.data, status=status.HTTP_200_OK)
