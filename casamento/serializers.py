@@ -18,6 +18,7 @@ class ListaCasamentoSerializer(serializers.ModelSerializer):
     class Meta:
         model = ListaCasamento
         fields = [
+            "pk",
             "nome_item",
             "medida_item",
             "preferencia_cor",

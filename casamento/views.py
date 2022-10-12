@@ -16,6 +16,22 @@ from telegram.telegrasms import Telegram
 @csrf_exempt
 @api_view(("POST",))
 @permission_classes((AllowAny,))
+def choice_item(request):
+    # {"id_tem": "0"}
+    # {"id_tem": "0"}
+    id_tem = request.data.get("id_item")
+    print(f"JSON = {id_tem}")
+    list_casamento = ListaCasamento.objects.filter(tipo_lista=id_tem).first().order_by("nome_item")
+    list_casamento.pk = int(id_tem)
+    list_casamento.save()
+    print(list_casamento)
+    serializer = ListaCasamentoSerializer(list_casamento, many=True)
+    print(f'Serializer {serializer}')
+
+    return Response(data=serializer.data, status=status.HTTP_200_OK)
+@csrf_exempt
+@api_view(("POST",))
+@permission_classes((AllowAny,))
 def list_casamento(request):
     # {"tipo_lista": "Lista chá de panela"}
     # {"tipo_lista": "lista de casamento"}
