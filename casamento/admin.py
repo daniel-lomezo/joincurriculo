@@ -10,6 +10,6 @@ class ListaCasamentoAdmin(ModelAdmin):
     list_filter = ("tipo_lista", "item_ja_escolhido")
     search_fields = ("nome_item", "medida_item", "preferencia_cor", "tipo_lista", "item_ja_escolhido")
 
-    fieldsets = (("Listagem dos Itens", {"fields": ("nome_item", "medida_item", "preferencia_cor", "tipo_lista", "item_ja_escolhido")}),)
+    fieldsets = (("Listagem dos Itens", {"fields": ("pk", "nome_item", "medida_item", "preferencia_cor", "tipo_lista", "item_ja_escolhido")}),)
 
 admin.site.register(ListaCasamento, ListaCasamentoAdmin)
