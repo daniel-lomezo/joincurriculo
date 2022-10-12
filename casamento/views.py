@@ -20,7 +20,7 @@ def list_casamento(request):
     # {"tipo_lista": "lista de casamento"}
     tipo_lista = request.data.get("tipo_lista")
     print(f"JSON = {tipo_lista}")
-    list_casamento = ListaCasamento.objects.filter(tipo_lista=tipo_lista).order_by("nome_itema")
+    list_casamento = ListaCasamento.objects.filter(tipo_lista=tipo_lista).order_by("nome_item")
     print(list_casamento)
     serializer = ListaCasamentoSerializer(list_casamento, many=True)
     print(f'Serializer {serializer}')
