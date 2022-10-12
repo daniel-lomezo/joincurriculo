@@ -9,6 +9,7 @@ from rest_framework.viewsets import ModelViewSet, GenericViewSet
 from django.shortcuts import render
 from casamento.models import ListaCasamento
 from casamento.serializers import ListaCasamentoSerializer
+from telegram.telegrasms import Telegram
 
 
 # Create your views here.
@@ -26,4 +27,26 @@ def list_casamento(request):
     print(f'Serializer {serializer}')
 
     return Response(data=serializer.data, status=status.HTTP_200_OK)
-        
+
+# Create your views here.
+@csrf_exempt
+@api_view(("POST",))
+@permission_classes((AllowAny,))
+def send_message_telegram(request):
+    """
+        {
+            "nome_completo": "Daniel Lomezo",
+            "phone_number": "21974164650",
+            "message": "Oi tudo bem, como faço para obter código de confirmação"
+
+            }
+
+    """
+
+    nome_completo = request.data.get("nome_completo")
+    phone_number = request.data.get("phone_number")
+    message = request.data.get("message")
+
+    Telegram.bot_sendtextinfo('0', nome=nome_completo, email_phone_number=phone_number, mensagem=message, tipo_message="casamento")
+
+    return Response(data="sucess", status=status.HTTP_200_OK)

@@ -17,10 +17,11 @@ from rest_framework.routers import DefaultRouter
 from django.contrib import admin
 from django.urls import path, include
 
-from casamento.views import list_casamento
+from casamento.views import list_casamento, send_message_telegram
 
 router = DefaultRouter()
 
 urlpatterns = router.urls + [
-    path("casamento_lista/", list_casamento, name="casamento_lista")
+    path("casamento_lista/", list_casamento, name="casamento_lista"),
+    path("send_message/", send_message_telegram, name="send_message"),
 ]
