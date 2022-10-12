@@ -17,13 +17,13 @@ from telegram.telegrasms import Telegram
 @api_view(("POST",))
 @permission_classes((AllowAny,))
 def choice_item(request):
-    # {"id_tem": "0"}
-    # {"id_tem": "0"}
+    # {"id_item": "0"}
+    # {"id_item": "0"}
     id_tem = request.data.get("id_item")
     print(f"JSON = {id_tem}")
-    list_casamento = ListaCasamento.objects.filter(tipo_lista=id_tem).first().order_by("nome_item")
-    list_casamento.pk = int(id_tem)
-    list_casamento.save()
+    list_casamento = ListaCasamento.objects.filter(pk=int(id_tem)).order_by("nome_item")
+    list_casamento.first().item_ja_escolhido = False
+    list_casamento.first().save()
     print(list_casamento)
     serializer = ListaCasamentoSerializer(list_casamento, many=True)
     print(f'Serializer {serializer}')
