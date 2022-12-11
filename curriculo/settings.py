@@ -89,11 +89,11 @@ WSGI_APPLICATION = 'curriculo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ddfplk546vk1j9',
+        'NAME': 'd2qau4d6udb7dr',
         # 'NAME': os.path.join(BASE_DIR, ''),
-        'USER': 'vabxskmqjzhenp',
-        'PASSWORD': '12aae6386c22e768e2b438ff9534984071a8539b324e537e69687136da48dbff',
-        'HOST': 'ec2-18-205-34-63.compute-1.amazonaws.com',
+        'USER': 'hprzhmfzfpepbk',
+        'PASSWORD': 'cdb3fda9ccc5880fb1d7e62c89300f9f789897a46e52e35ce45e96883a8568b5',
+        'HOST': 'ec2-52-21-136-176.compute-1.amazonaws.com',
         '5432': '', # 8000 is default
     }
 }
