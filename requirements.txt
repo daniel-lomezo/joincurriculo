@@ -1,6 +1,6 @@
-Django==3.2.14
-httplib2==0.11.3
-psycopg2==2.8.3
+Django
+httplib2
+psycopg2-binary
 requests
 whitenoise
 gunicorn

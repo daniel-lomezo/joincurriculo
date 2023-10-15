@@ -3,9 +3,6 @@
 settings.py
 .settings.py
 *settings.py
+venv/
 
 
-
-curriculo/settings.py
-curriculo/settings.py
-curriculo/settings.py

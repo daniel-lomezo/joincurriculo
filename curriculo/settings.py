@@ -86,15 +86,11 @@ WSGI_APPLICATION = 'curriculo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# Conexão do Django com sqlite3
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd2qau4d6udb7dr',
-        # 'NAME': os.path.join(BASE_DIR, ''),
-        'USER': 'hprzhmfzfpepbk',
-        'PASSWORD': 'cdb3fda9ccc5880fb1d7e62c89300f9f789897a46e52e35ce45e96883a8568b5',
-        'HOST': 'ec2-52-21-136-176.compute-1.amazonaws.com',
-        '5432': '', # 8000 is default
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
     }
 }
 
