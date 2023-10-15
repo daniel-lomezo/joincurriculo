@@ -1,8 +1,5 @@
 .pyc
 .idea
-settings.py
-.settings.py
-*settings.py
 venv/
 
 
