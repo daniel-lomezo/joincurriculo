@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'icon/fav.png' %}">
+
+    <title>Curriculo Daniel Lomezo</title>
+
+    <!-- Principal CSS do Bootstrap -->
+    <link  href="{% static 'grep/bootstrap.css' %}" rel="stylesheet">
+
+    <!-- Estilos customizados para esse template -->
+    <link href="{% static  'grep/jumbotron.css' %}" rel="stylesheet">
+
+<body>
+   
+
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="../dadospessoais/">Dados Pessoais</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"  aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+
+<main role="main">
+
+      <!-- Principal jumbotron, para a principal mensagem de marketing ou call to action -->
+      <div class="jumbotron">
+       
+          <h3 class="display-4">Experiências</h3>
+                 
+       
+      </div>
+
+<div class="container">
+	<div class="container">
+        <!-- Exemplo de linha de colunas -->
+    
+    <hr width = “2” size = “100”>
+      {% for experiencia in experiencialist %}
+
+      
+        <h4><b>{{ experiencia.nomeempresa}}</b></h4>
+        <p><b>{{experiencia.cargo}}</b></p>
+        <p><b>Funções:</b>  {{experiencia.objetos}}</p>
+      
+      <hr>
+      <br>
+      <br>
+      
+
+        {% endfor %}
+  </div>
+
+    
+  
+  
+</div> 
+<!-- /container -->
+</main>
+
+    <footer class="container">
+      <p>Redes Sociais ->   <img src="https://img.icons8.com/metro/26/000000/facebook.png"/><a href="https://www.facebook.com/daniel.lomezo"> Daniel Lomezo</a> -  <img src="https://img.icons8.com/android/24/000000/linkedin.png"/>   <a href="">  Daniel Lomezo de Oliveira</a></p>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+Django
+django
+httplib2
+psycopg2-binary
+requests
+whitenoise
+gunicorn
+applicationinsights
+djangorestframework
+django-cors-headers
