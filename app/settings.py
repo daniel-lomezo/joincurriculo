@@ -16,6 +16,10 @@ SECRET_KEY = 'bbvx7x*4r0q0d5owb)!990lq^8z&_@)(xe9ra0_7iqp6m9&or$'
 DEBUG = True
 
 ALLOWED_HOSTS = ['joincurriculo-acfae926f59b.herokuapp.com', 'localhost', '*']
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    # Add other origins if needed
+]
 
 
 # Application definition

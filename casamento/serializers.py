@@ -25,4 +25,5 @@ class ListaCasamentoSerializer(serializers.ModelSerializer):
             "tipo_lista",
             "item_ja_escolhido",
             "codigo_seguranca",
+            "quem_escolheu"
         ]
