@@ -17,31 +17,33 @@ from telegram.telegrasms import Telegram
 @api_view(("POST",))
 @permission_classes((AllowAny,))
 def choice_item(request):
-    # {"id_item": "0"}
-    # {"id_item": "0"}
     id_tem = request.data.get("id_item")
-    apelido = request.data.get("apelida")
-    print(f"JSON = {id_tem}")
-    list_casamento = ListaCasamento.objects.filter(pk=int(id_tem)).order_by("nome_item")
+    apelido = request.data.get("apelido")
+
+    print(f"JSON = {apelido}")
+    list_casamento = ListaCasamento.objects.get(pk=int(id_tem))
+
+    list_casamento.item_ja_escolhido = False
+    list_casamento.quem_escolheu = apelido
+    list_casamento.save()
+
+    list_casamento = ListaCasamento.objects.filter(pk=int(id_tem))
+
+    print("------------------------------->", list_casamento.first().quem_escolheu)
+
+    return Response(status=status.HTTP_200_OK)
 
 
-    serializer = ListaCasamentoSerializer(list_casamento, many=True)
-
-    list_casamento.first().item_ja_escolhido = False
-    list_casamento.first().quem_escolheu = apelido
-    list_casamento.first().save()
-
-
-    return Response(data=serializer.data, status=status.HTTP_200_OK)
 @csrf_exempt
 @api_view(("POST",))
 @permission_classes((AllowAny,))
 def list_casamento(request):
-    # {"tipo_lista": "Lista chá de panela"}
-    # {"tipo_lista": "lista de casamento"}
     tipo_lista = request.data.get("tipo_lista")
     print(f"JSON = {tipo_lista}")
-    list_casamento = ListaCasamento.objects.filter(tipo_lista=tipo_lista).order_by("nome_item")
+    list_casamento = ListaCasamento.objects.filter(
+                                                    tipo_lista="Lista chá de panela",
+                                                    item_ja_escolhido=True
+                                                    ).order_by("nome_item")
     print(list_casamento)
     serializer = ListaCasamentoSerializer(list_casamento, many=True)
 
