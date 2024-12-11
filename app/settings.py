@@ -15,12 +15,23 @@ SECRET_KEY = 'bbvx7x*4r0q0d5owb)!990lq^8z&_@)(xe9ra0_7iqp6m9&or$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['joincurriculo-acfae926f59b.herokuapp.com', 'localhost', '*']
+ALLOWED_HOSTS = ['joincurriculo-acfae926f59b.herokuapp.com', "3d3c-2804-658c-210f-f000-89fe-811d-6e51-c6bc.ngrok-free.app", 'localhost', '*']
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
-    # Add other origins if needed
+    "http://localhost:8000",
+    "http://192.168.18.183:8080",
+    "https://3d3c-2804-658c-210f-f000-89fe-811d-6e51-c6bc.ngrok-free.app",
+    "http://localhost:5173",
+    "http://172.19.0.2:8080",
+    "http://localhost"
+
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://3d3c-2804-658c-210f-f000-89fe-811d-6e51-c6bc.ngrok-free.app",
+    # Add other trusted origins if needed
+]
 
 # Application definition
 
