@@ -20,11 +20,7 @@ ALLOWED_HOSTS = ['joincurriculo-acfae926f59b.herokuapp.com', "3d3c-2804-658c-210
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "http://localhost:8000",
-    "http://192.168.18.183:8080",
-    "https://3d3c-2804-658c-210f-f000-89fe-811d-6e51-c6bc.ngrok-free.app",
-    "http://localhost:5173",
-    "http://172.19.0.2:8080",
-    "http://localhost"
+    "https://luanlorena-6d383b7c4a64.herokuapp.com"
 
 ]
 
