@@ -1,6 +1,7 @@
 Django
 django
 httplib2
+django_extensions
 psycopg2-binary
 requests
 whitenoise
