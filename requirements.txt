@@ -1,5 +1,6 @@
 Django
 django
+shell_plus
 httplib2
 psycopg2-binary
 requests

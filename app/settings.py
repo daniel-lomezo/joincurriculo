@@ -32,6 +32,7 @@ CSRF_TRUSTED_ORIGINS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -88,8 +89,13 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
+        'ENGINE': "django.db.backends.postgresql",
+        'NAME': 'd9134a7utm94rf',
+        'USER': 'ucf0knburn3fk',
+        'PASSWORD': 'p38e552c88007327a99834ab59f7b7e3c29815f1ef0f66c84398ae0477e2c4d92',
+        'HOST': 'cd1goc44htrmfn.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
+        'PORT': '5432',
+
     }
 }
 
